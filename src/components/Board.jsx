@@ -13,12 +13,13 @@ export default function Board({ xIsNext, squares, onPlay }) {
     }
     onPlay(nextSquares);
   }
-  console.log(squares);
 
   const winner = calculateWinner(squares);
+
   const status = winner
     ? `Winner: ${winner}`
     : `Next player: ${xIsNext ? "X" : "O"}`;
+
   function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
